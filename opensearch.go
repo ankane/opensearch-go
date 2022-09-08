@@ -250,7 +250,7 @@ func checkCompatibleInfo(info info) error {
 	if info.Version.Distribution == openSearch {
 		return nil
 	}
-	if major != 7 {
+	if major < 7 {
 		return errors.New(unsupportedProduct)
 	}
 	return nil
